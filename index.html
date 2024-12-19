@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyHigh Havayolları</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>SkyHigh Havayollarına Hoşgeldiniz</h1>
+    </header>
+    <div class="background"></div>
+    <div class="header">
+        <nav class="header__nav">
+            <a href="#">Anasayfa</a>
+            <a href="#">Uçuş Rezervasyonu</a>
+            <a href="#">Destinasyonlar</a>
+            <a href="#">Bize Ulaşın</a>
+            <button id="loginBtn">Giriş Yap</button>
+            <button id="registerBtn">Kayıt Ol</button>
+        </nav>
+        <div class="header__burger">
+            <span></span>
+        </div>
+        <div class="header-overlay"></div>
+    </div>
+    <section class="search">
+        <h2>Uçuşunuzu Bulun</h2>
+        <div class="autocomplete">
+            <input id="from" type="text" placeholder="Nereden">
+        </div>
+        <div class="autocomplete">
+            <input id="to" type="text" placeholder="Nereye">
+        </div>
+        <input type="date">
+        <button>Ara</button>
+    </section>
+    <section class="services">
+        <div class="service-card">
+            <h3>Konforlu Koltuklar</h3>
+            <p>Konforunuz için ekstra bacak mesafesi ve ayarlanabilir koltuklar.</p>
+        </div>
+        <div class="service-card">
+            <h3>Uçuş İçi Yemekler</h3>
+            <p>Uçuş sırasında lezzetli yemekler ve içecekler servis edilir.</p>
+        </div>
+        <div class="service-card">
+            <h3>Eğlence</h3>
+            <p>Seyahatiniz sırasında film izleyin, müzik dinleyin ve oyunlar oynayın.</p>
+        </div>
+    </section>
+    <div id="loginPopup" class="popup">
+        <div class="overlay"></div>
+        <div class="popup-content">
+            <span id="loginClose" class="close-btn">&times;</span>
+            <h2>Giriş Yap</h2>
+            <input id="loginEmail" type="email" placeholder="E-posta" />
+            <span id="loginEmailError" class="error-text"></span>
+            <input id="loginPassword" type="password" placeholder="Şifre" />
+            <span id="loginPasswordError" class="error-text"></span>
+            <button id="loginSubmit" disabled>Giriş Yap</button>
+        </div>
+    </div>
+    
+    <div id="registerPopup" class="popup">
+        <div class="overlay"></div>
+        <div class="popup-content">
+            <span id="registerClose" class="close-btn">&times;</span>
+            <h2>Kayıt Ol</h2>
+            <input id="registerName" type="text" placeholder="Ad" />
+            <span id="registerNameError" class="error-text"></span>
+            <input id="registerEmail" type="email" placeholder="E-posta" />
+            <span id="registerEmailError" class="error-text"></span>
+            <input id="registerPassword" type="password" placeholder="Şifre" />
+            <span id="registerPasswordError" class="error-text"></span>
+            <button id="registerSubmit" disabled>Kayıt Ol</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

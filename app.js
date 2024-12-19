@@ -14,13 +14,11 @@ const cities = [{ name: "Bujumbura", country: "Burundi" }, { name: "Gitega", cou
         list.setAttribute("class", "autocomplete-items");
         this.parentNode.appendChild(list);
         
-        // Фильтрация городов
         const filteredCities = arr.filter(city => 
             city.name.toUpperCase().includes(value.toUpperCase()) ||
             city.country.toUpperCase().includes(value.toUpperCase())
         );
 
-        // Ограничиваем количество городов до 5
         const limitedCities = filteredCities.slice(0, 5);
 
         limitedCities.forEach(city => {
@@ -114,7 +112,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// Открытие и закрытие попапов
 const loginBtn = document.getElementById('loginBtn');
 const registerBtn = document.getElementById('registerBtn');
 const loginPopup = document.getElementById('loginPopup');
@@ -122,7 +119,6 @@ const registerPopup = document.getElementById('registerPopup');
 const loginClose = document.getElementById('loginClose');
 const registerClose = document.getElementById('registerClose');
 
-// Открыть попап для входа
 loginBtn.addEventListener('click', () => {
     loginPopup.classList.add('show');
     setTimeout(() => {
@@ -130,7 +126,6 @@ loginBtn.addEventListener('click', () => {
     }, 50);
 });
 
-// Открыть попап для регистрации
 registerBtn.addEventListener('click', () => {
     registerPopup.classList.add('show');
     setTimeout(() => {
@@ -138,7 +133,6 @@ registerBtn.addEventListener('click', () => {
     }, 50);
 });
 
-// Закрыть попап при клике на крестик
 loginClose.addEventListener('click', () => {
     loginPopup.querySelector('.popup-content').classList.remove('show');
     setTimeout(() => {
@@ -146,7 +140,6 @@ loginClose.addEventListener('click', () => {
     }, 300);
 });
 
-// Закрыть попап при клике на крестик
 registerClose.addEventListener('click', () => {
     registerPopup.querySelector('.popup-content').classList.remove('show');
     setTimeout(() => {
@@ -154,7 +147,6 @@ registerClose.addEventListener('click', () => {
     }, 300);
 });
 
-// Закрытие попапа при клике на оверлей
 loginPopup.querySelector('.overlay').addEventListener('click', () => {
     loginPopup.querySelector('.popup-content').classList.remove('show');
     setTimeout(() => {
@@ -218,13 +210,10 @@ function resetLoginForm() {
   loginEmailError.textContent = '';
   loginPasswordError.textContent = '';
   loginSubmit.disabled = true;
-
-  // Очистка содержимого полей ввода
   loginEmail.value = '';
   loginPassword.value = '';
 }
 
-// Валидация для регистрации
 const registerName = document.getElementById('registerName');
 const registerEmail = document.getElementById('registerEmail');
 const registerPassword = document.getElementById('registerPassword');
@@ -293,8 +282,6 @@ function resetRegisterForm() {
   registerEmailError.textContent = '';
   registerPasswordError.textContent = '';
   registerSubmit.disabled = true;
-
-  // Очистка содержимого полей ввода
   registerName.value = '';
   registerEmail.value = '';
   registerPassword.value = '';

@@ -48,7 +48,7 @@ header {
 }
 
 .header__burger {
-    display: none; /* Скрыто по умолчанию */
+    display: none; 
     width: 50px;
     height: 30px;
     position: relative;
@@ -130,7 +130,6 @@ header {
     z-index: 5;
 }
 
-/* Стили для попапов */
 .popup {
     display: none;
     position: fixed;
@@ -141,8 +140,8 @@ header {
     justify-content: center;
     align-items: center;
     z-index: 1000;
-    opacity: 0; /* Изначально скрыт */
-    transition: opacity 0.3s ease; /* Плавное появление попапа */
+    opacity: 0;
+    transition: opacity 0.3s ease;
     z-index: 10;
 }
 
@@ -152,17 +151,17 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0); /* Начальная прозрачность */
-    transition: background-color 0.3s ease; /* Плавное изменение фона */
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease;
 }
 
 .popup.show {
     display: flex;
-    opacity: 1; /* Плавное появление попапа */
+    opacity: 1;
 }
 
 .popup.show .overlay {
-    background-color: rgba(0, 0, 0, 0.5); /* Прозрачность фона при открытии */
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .popup-content {
@@ -181,12 +180,12 @@ header {
     opacity: 1;
 }
 
-/* Стили для полей ввода по умолчанию (синяя обводка) */
+
 .popup-content input {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
-    border: 1px solid #0078d4; /* Синяя обводка по умолчанию */
+    border: 1px solid #0078d4;
     border-radius: 5px;
 }
 
@@ -215,7 +214,6 @@ header {
     cursor: pointer;
 }
 
-/* Стили для текста ошибки */
 .error-text {
     color: red;
     font-size: 12px;
@@ -223,17 +221,14 @@ header {
     margin-top: 5px;
 }
 
-/* Стили для ошибок (красная обводка) */
 input.invalid {
     border: 1px solid red;
 }
 
-/* Стили для валидных полей (зелёная обводка) */
 input.valid {
     border: 1px solid green;
 }
 
-/* Стили для кнопки в состоянии disabled */
 button:disabled {
     background-color: #ccc;
     cursor: not-allowed;
@@ -334,13 +329,12 @@ button:disabled {
         display: block;
     }
 
-    /* На мобильных устройствах скрываем обычное меню */
     .header__nav.active {
-        right: 0; /* Меню появляется */
+        right: 0;
     }
 
     .header-overlay.active {
-        display: block; /* Оверлей появляется */
+        display: block; 
     }
     .header__nav {
         position: fixed;
